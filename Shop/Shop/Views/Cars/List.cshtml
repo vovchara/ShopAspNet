@@ -1,0 +1,27 @@
+﻿@using Shop.Data.Models
+@model IEnumerable<CarsModel>
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+    <title>List</title>
+    </head>
+    <body>
+        <h2>Всі авто</h2>
+        @{ 
+            foreach (var item in Model)
+            {
+                <div>
+                    <h2>Модель: @item.Name</h2>
+                    <p>Ціна: @item.Price.ToString("c")</p>
+                </div>
+            }
+        }
+    </body>
+</html>
